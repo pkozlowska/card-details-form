@@ -1,0 +1,21 @@
+.card-view {
+  background-image: url("images/bg-main-desktop.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 33.54%;
+}
+
+@media screen and (max-width: 992px) {
+  .card-view {
+    background-image: url("./images/bg-main-mobile.png");
+    background-repeat: no-repeat;
+    height: 19rem;
+    width: 100%;
+  }
+}
+
+
+.formSubmittedView {
+  display: none; 
+}
