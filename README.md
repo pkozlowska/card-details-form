@@ -28,3 +28,4 @@ The user should be able to:
 - HTML5
 - CSS3
 - JavaScript
+- Bootstrap 
