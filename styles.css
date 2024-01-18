@@ -1,3 +1,38 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap");
+
+:root {
+  /*FONTS*/
+  --main-font-size: 1.125rem;
+  --small-font-size: 0.5625rem;
+  --medium-font-size: 0.75rem;
+  --big-font-size: 1.75rem;
+
+  /*COLORS*/
+  --deep-violet-color: #21092f;
+  --red-color: #ff5050;
+  --light-grey: #dfdee0;
+
+  /*SIZES*/
+  --mobile-card-width: 17.8125rem;
+  --mobile-card-height: 9.75rem;
+  --desktop-card-width: 27.9375rem;
+  --desktop-card-height: 15.3125rem;
+
+  /*MARGINS*/
+  --mobile-margin-big: 19%;
+  --mobile-margin-small: 4.27%;
+  --desktop-margin-small: 11.6875rem;
+}
+
+* {
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 500;
+}
+
+.formSubmittedView {
+  display: none;
+}
+
 .card-view {
   background-image: url("images/bg-main-desktop.png");
   background-repeat: no-repeat;
@@ -6,16 +41,174 @@
   width: 33.54%;
 }
 
-@media screen and (max-width: 992px) {
-  .card-view {
-    background-image: url("./images/bg-main-mobile.png");
-    background-repeat: no-repeat;
-    height: 19rem;
-    width: 100%;
+.card {
+  width: var(--desktop-card-width);
+  height: var(--desktop-card-height);
+  border-radius: 0.625rem;
+  box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.3);
+}
+
+.card-front {
+  background-image: url("images/bg-card-front.png");
+  background-repeat: no-repeat;
+  background-size: var(--desktop-card-width) var(--desktop-card-height);
+  background-position: center;
+}
+
+.logo {
+  width: 18.95%;
+}
+
+.card-front-info {
+  font-size: var(--big-font-size);
+  letter-spacing: 3.422px;
+  margin: 4rem 0.5rem 0 0.6rem;
+}
+
+.card-front-info-botttom {
+  letter-spacing: 2px;
+}
+
+.card-back {
+  background-image: url("images/bg-card-back.png");
+  background-repeat: no-repeat;
+  background-size: var(--desktop-card-width) var(--desktop-card-height);
+  background-position: center;
+}
+
+.cvc {
+  font-size: 0.875rem;
+  letter-spacing: 1.286px;
+  margin-right: 12.944%;
+}
+
+label {
+  font-size: var(--medium-font-size);
+  letter-spacing: 2px;
+  color: var(--deep-violet-color);
+}
+
+input {
+  height: 2.8125rem;
+  border: 1px solid var(--light-grey);
+  border-radius: 0.5rem;
+}
+
+.text-input::placeholder {
+  padding-left: 1rem;
+  color: var(--deep-violet-color);
+  opacity: 0.25;
+  font-size: var(--main-font-size);
+}
+
+.form-container {
+  max-width: 23.8125rem;
+  margin-right: 10rem;
+}
+
+.form-field {
+  margin-bottom: 1.625rem;
+  gap: 0.5625rem;
+}
+
+.date-cell {
+  width: 46%;
+}
+
+.cvc-field {
+  width: 50%;
+  margin-left: 1rem;
+}
+
+.confirm-btn {
+  background-color: var(--deep-violet-color);
+  border-radius: 0.5rem;
+  font-size: var(--main-font-size);
+  margin-top: 2.5rem;
+}
+
+@media screen and (min-width: 992px) {
+  .card-front {
+    margin-top: 11.687rem;
+    left: 10.25rem;
+  }
+
+  .card-front-info-bottom {
+    font-size: 0.875rem;
+    margin: 1.0625rem 2rem 0 2rem;
+  }
+
+  .card-back {
+    top: 45rem;
+    left: 16.125rem;
   }
 }
 
+@media screen and (max-width: 1200px) {
+  .form-container {
+    margin-right: 2rem;
+  }
+}
 
-.formSubmittedView {
-  display: none; 
+@media screen and (max-width: 992px) {
+  .form-container {
+    margin-right: 0;
+  }
+
+  .card-view {
+    background-image: url("./images/bg-main-mobile.png");
+    background-repeat: no-repeat;
+    height: 15rem;
+    width: 100%;
+    padding-top: 2rem;
+    margin-bottom: 8.875rem;
+  }
+
+  .card {
+    height: var(--mobile-card-height);
+    width: var(--mobile-card-width);
+    border-radius: 0.45rem;
+  }
+  .card-back {
+    margin-right: var(--mobile-margin-small);
+    margin-left: var(--mobile-margin-big);
+    background-size: var(--mobile-card-width) var(--mobile-card-height);
+  }
+
+  .cvc {
+    font-size: var(--small-font-size);
+  }
+
+  .card-front {
+    margin-right: var(--mobile-margin-big);
+    margin-left: var(--mobile-margin-small);
+    margin-top: -3.9035rem;
+    background-size: var(--mobile-card-width) var(--mobile-card-height);
+  }
+
+  .card-front-info {
+    margin: 2.3125rem 0.5rem 0 0.6rem;
+    font-size: var(--main-font-size);
+  }
+
+  .card-front-info-bottom {
+    font-size: 0.5rem;
+    letter-spacing: 1.286px;
+    margin: 1.0625rem 0.2rem 1.4rem 0.2rem;
+  }
+
+  .form-field {
+    margin-bottom: 1.25rem;
+    gap: 0.5rem;
+  }
+
+  .confirm-btn {
+    margin-top: 1.75rem;
+  }
+}
+
+.footer-container > p > a {
+  text-decoration: none;
+  color: #34bd7d;
+  font-weight: var(--font-weight-semibold);
 }
