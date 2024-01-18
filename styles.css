@@ -11,6 +11,7 @@
   --deep-violet-color: #21092f;
   --red-color: #ff5050;
   --light-grey: #dfdee0;
+  --dark-grey: #8F8694;
 
   /*SIZES*/
   --mobile-card-width: 17.8125rem;
@@ -28,10 +29,10 @@
   font-family: "Space Grotesk", sans-serif;
   font-weight: 500;
 }
-
-.formSubmittedView {
+/* 
+.form-submitted-view {
   display: none;
-}
+} */
 
 .card-view {
   background-image: url("images/bg-main-desktop.png");
@@ -120,11 +121,28 @@ input {
   margin-left: 1rem;
 }
 
-.confirm-btn {
+.button-cta {
   background-color: var(--deep-violet-color);
   border-radius: 0.5rem;
   font-size: var(--main-font-size);
+}
+
+.confirm-btn {
   margin-top: 2.5rem;
+}
+
+.form-submitted-view > h2 {
+  letter-spacing: 3.422px;
+  font-size: var(--big-font-size);
+}
+
+.form-submitted-view > p {
+  color: var(--dark-grey);
+  font-size: var(--main-font-size);
+}
+
+.continue-btn {
+  margin-top: 3rem;
 }
 
 @media screen and (min-width: 992px) {
@@ -204,6 +222,10 @@ input {
 
   .confirm-btn {
     margin-top: 1.75rem;
+  }
+
+  .form-submitted-view {
+    margin-top: 5.6875rem;
   }
 }
 
