@@ -10,8 +10,9 @@
   /*COLORS*/
   --deep-violet-color: #21092f;
   --red-color: #ff5050;
+  --success-color: rgb(72, 163, 72);
   --light-grey: #dfdee0;
-  --dark-grey: #8F8694;
+  --dark-grey: #8f8694;
 
   /*SIZES*/
   --mobile-card-width: 17.8125rem;
@@ -29,10 +30,6 @@
   font-family: "Space Grotesk", sans-serif;
   font-weight: 500;
 }
-/* 
-.form-submitted-view {
-  display: none;
-} */
 
 .card-view {
   background-image: url("images/bg-main-desktop.png");
@@ -125,10 +122,45 @@ input {
   background-color: var(--deep-violet-color);
   border-radius: 0.5rem;
   font-size: var(--main-font-size);
+  cursor: pointer;
 }
 
 .confirm-btn {
   margin-top: 2.5rem;
+}
+
+.form-field input.success {
+  border-color: var(--success-color);
+}
+
+.form-field input.error {
+  border-color: var(--red-color);
+}
+
+.form-field span {
+  visibility: hidden;
+}
+
+.form-field span.success {
+  visibility: visible;
+  color: var(--success-color);
+}
+
+.form-field span.error {
+  visibility: visible;
+  color: var(--red-color);
+}
+
+.form-submitted-view {
+  display: none;
+}
+
+.form-submitted-view.success {
+  display: unset;
+}
+
+#form.success {
+  display: none;
 }
 
 .form-submitted-view > h2 {
