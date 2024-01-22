@@ -83,7 +83,7 @@ class FormField {
       this.formField.value.length > this.maxLength ||
       !this.numReg.test(this.formField.value.trim())
     ) {
-      this.showError(`Should consists of ${this.minLength} digits`);
+      this.showError(`Only ${this.minLength} digits`);
       return false;
     } else if (Number(this.formField.value) >= 13) {
       this.showError(`Max. 12`);
@@ -102,7 +102,7 @@ class FormField {
       this.formField.value.length < this.minLength ||
       this.formField.value.length > this.maxLength
     ) {
-      this.showError(`Should consists of ${this.minLength} digits`);
+      this.showError(`Only ${this.minLength} digits`);
       return false;
     } else if (!this.numReg.test(this.formField.value.trim())) {
       this.showError(`Only digits`);

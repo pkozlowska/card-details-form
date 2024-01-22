@@ -25,7 +25,9 @@
         <div
           class="card card-back d-flex flex-column justify-content-center border-0"
         >
-          <p class="cvc text-white mb-0 align-self-end">000</p>
+          <p id="card-info-cvc" class="cvc text-white mb-0 align-self-end">
+            000
+          </p>
         </div>
         <div
           class="card card-front d-flex flex-column justify-content-center border-0"
@@ -38,14 +40,27 @@
           <article
             class="card-front-info d-flex flex-column justify-content-between"
           >
-            <p class="text-white text-center text-uppercase mb-0">
+            <p
+              id="card-info-number"
+              class="text-white text-center text-uppercase mb-0"
+            >
               0000 0000 0000 0000
             </p>
             <div
               class="card-front-info-bottom d-flex flex-row justify-content-between mb-3"
             >
-              <p class="text-white mb-0 text-uppercase">Jane Appleseed</p>
-              <span class="text-white text-uppercase">00/00</span>
+              <p id="card-info-name" class="text-white mb-0 text-uppercase">
+                Jane Appleseed
+              </p>
+              <div class="d-flex flex-row">
+                <span id="card-info-date-MM" class="text-white text-uppercase"
+                  >00</span
+                >
+                <span class="text-white text-uppercase">/</span>
+                <span id="card-info-date-YY" class="text-white text-uppercase"
+                  >00</span
+                >
+              </div>
             </div>
           </article>
         </div>
@@ -55,19 +70,22 @@
           <div class="form-field d-flex flex-column">
             <label for="name" class="mb-0 text-uppercase">Cardholder Name</label
             ><input
+              onchange="displayTypedName()"
               type="text"
               id="name"
               class="text-input"
               name="name"
               placeholder="e.g. Jane Appleseed"
               required
-            /><span>Error</span>
+            />
+            <span>Error</span>
           </div>
           <div class="form-field d-flex flex-column">
             <label for="card-number" class="mb-0 text-uppercase"
               >Card Number</label
             >
             <input
+              onchange="displayTypedNumber()"
               type="text"
               id="card-number"
               class="text-input"
@@ -83,27 +101,34 @@
               <div
                 class="date-input-container d-flex flex-row justify-content-between"
               >
-                <input
-                  type="text"
-                  id="date-MM"
-                  class="text-input date-cell"
-                  name="date-MM"
-                  placeholder="MM"
-                  required
-                /><span>Error</span>
-                <input
-                  type="text"
-                  id="date-YY"
-                  class="text-input date-cell"
-                  name="date-YY"
-                  placeholder="YY"
-                  required
-                /><span>Error</span>
+                <div class="date-cell d-flex flex-column">
+                  <input
+                    onchange="displayTypedDateMM()"
+                    type="text"
+                    id="date-MM"
+                    class="text-input mb-2"
+                    name="date-MM"
+                    placeholder="MM"
+                    required
+                  /><span>Error</span>
+                </div>
+                <div class="date-cell d-flex flex-column">
+                  <input
+                    onchange="displayTypedDateYY()"
+                    type="text"
+                    id="date-YY"
+                    class="text-input mb-2"
+                    name="date-YY"
+                    placeholder="YY"
+                    required
+                  /><span>Error</span>
+                </div>
               </div>
             </div>
             <div class="cvc-field form-field d-flex flex-column">
               <label for="cvc" class="mb-0 text-uppercase">cvc</label>
               <input
+                onchange="displayTypedCVC()"
                 type="text"
                 id="cvc"
                 class="text-input"

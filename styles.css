@@ -99,13 +99,19 @@ input {
   font-size: var(--main-font-size);
 }
 
+#date-MM::placeholder, #date-YY::placeholder {
+  padding-left: 0;
+  text-align: center;
+}
+
 .form-container {
   max-width: 23.8125rem;
   margin-right: 10rem;
+  margin-left: 10rem;
 }
 
 .form-field {
-  margin-bottom: 1.625rem;
+  margin-bottom: 1rem;
   gap: 0.5625rem;
 }
 
@@ -139,6 +145,7 @@ input {
 
 .form-field span {
   visibility: hidden;
+  font-size: var(--medium-font-size);
 }
 
 .form-field span.success {
@@ -197,12 +204,14 @@ input {
 @media screen and (max-width: 1200px) {
   .form-container {
     margin-right: 2rem;
+    margin-left: 0;
   }
 }
 
 @media screen and (max-width: 992px) {
   .form-container {
     margin-right: 0;
+    margin-left: 0;
   }
 
   .card-view {
