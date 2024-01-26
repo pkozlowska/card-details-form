@@ -2,10 +2,10 @@
 This is a solution to the [Interactive card details form on Frontend Mentor](https://www.frontendmentor.io/challenges/interactive-card-details-form-XpS8cKZDWw/hub)
 
 Desktop version:
-![Desktop view]()
+![Desktop view](images/final-desktop.jpg)
 
 Mobile version: 
-![Mobile view]()
+![Mobile view](images/final-mobile.jpg)
 
 ## The challange
 
